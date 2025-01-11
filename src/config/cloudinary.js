@@ -10,10 +10,6 @@ cloudinary.config({
   api_secret: CLOUDINARY_API_SECRET
 });
 
-// cloudinary.config({
-//   cloud_name: 'dzoewlcdy',
-//   api_key: '782489314224354',
-//   api_secret: 'wQCD4cFEfysZERrfUPgHkKebkG4'
-// });
+
 
 module.exports = cloudinary;
