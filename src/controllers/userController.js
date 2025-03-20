@@ -30,86 +30,7 @@ exports.loginUser = async (req, res) => {
   }
 };
 
-// exports.registerUser = async (req, res) => {
-//   const { 
-//     name, email, password,username, role, phone, address, dateOfBirth, 
-//     department, position, hireDate, skills, certifications, emergencyContact 
-//   } = req.body; 
 
-//   const { error } = createUserVallidation.validate(req.body, { abortEarly: false });
-//   if (error) {
-//     return res.status(400).json({ error: error.details.map((err) => err.message) });
-//   }
-
-//   try {
-
-//     const emailExists = await User.findOne({ email });
-//     if (emailExists) {
-//       return res.status(400).json({ error: 'Email already in use' });
-//     }
-
-//     // Check if username already exists
-//     const usernameExists = await User.findOne({ username });
-//     if (usernameExists) {
-//       return res.status(400).json({ error: 'Username already in use' });
-//     }
-
-
-//     // Create a new user, including the certifications array
-//     const newUser = await User.create({
-//       name,
-//       email,
-//       password,
-//       role,
-//       username,
-//       phone,
-//       address,
-//       dateOfBirth,
-//       department,
-//       position,
-//       hireDate,
-//       skills,
-//       certifications, // This will handle the array of certifications
-//       emergencyContact 
-//     });
-
-    
-//     const verificationToken = crypto.randomBytes(20).toString("hex");
-//     const tokenExpiration = Date.now() + 3600000;
-
-//     await User.updateVerificationToken(email, verificationToken, tokenExpiration);
-
-//     const verificationLink = `http://datingfrontend.dgn128.pro/verify-email?email=${email}&token=${verificationToken}`;
-//     const message = {
-//       from: "akanjilawrence9999@gmail.com",
-//       to: email,
-//       subject: "Account Verification",
-//       html: `
-//         <p>Hello ${username},</p>
-//         <p>Thank you for registering with us. Please click the link below to verify your email address:</p>
-//         <p><a href="${verificationLink}">Verify your email</a></p>
-//         <p>If you did not sign up for an account, please ignore this email.</p>
-//         <p>Best regards,</p>
-//         <p>Your App Team</p>
-//       `,
-//     };
-
-//     const transporter = nodemailer.createTransport({
-//       service: "Gmail",
-//       auth: {
-//         user: "akanjilawrence9999@gmail.com",
-//         pass: "wgjg ifns xnvq ponr",
-//       },
-//     });
-
-//     await transporter.sendMail(message);
-
-//     res.status(201).json(newUser);
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ error: 'Error creating user' });
-//   }
-// };
 
 
 exports.registerUser = async (req, res) => {
@@ -179,7 +100,7 @@ exports.registerUser = async (req, res) => {
       service: "Gmail",
       auth: {
         user: "akanjilawrence9999@gmail.com",
-        pass: "wgjg ifns xnvq ponr",
+        pass: "rwgjg difns kxnvq mponr",
       },
     });
 
